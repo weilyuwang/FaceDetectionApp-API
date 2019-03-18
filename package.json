@@ -2,7 +2,7 @@
   "name": "facerecognitionapp-api",
   "version": "1.0.0",
   "description": "face recognition app api",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
   },
