@@ -15,9 +15,7 @@ const db = knex({
   client: "pg",
   connection: {
     host: "postgresql-flat-90297", // heroku postgreSQL
-    user: "weilyu",
-    password: "",
-    database: "face-rec"
+    ssl: true
   }
 });
 
