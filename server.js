@@ -14,7 +14,7 @@ const image = require("./controllers/image");
 const db = knex({
   client: "pg",
   connection: {
-    connectionString: "process.env.DATABASE_URL", // heroku postgreSQL
+    connectionString: "process.env.DATABASE_URL",
     ssl: true
   }
 });
@@ -50,16 +50,6 @@ app.post("/imageurl", (req, res) => {
   image.handleApiCall(req, res);
 });
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT, () => {
   console.log(`app is running on port ${process.env.PORT}`);
 });
-
-// routes
-
-/*
-/ --> res = this is working
-/signin --> POST = success/fail
-/register --> POST = user
-/profile/:userId  --> GET = user 
-/image --> PUT --> user
-*/
