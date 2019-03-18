@@ -33,7 +33,7 @@ app.use(bodyParser.json()); // use middleware body parser
 app.use(cors()); // use middleware cors
 
 app.get("/", (req, res) => {
-  res.send(database.users);
+  res.send("it is working");
 });
 
 app.post("/signin", signin.handleSignin(db, bcrypt));
